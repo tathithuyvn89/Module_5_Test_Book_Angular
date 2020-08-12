@@ -1,0 +1,22 @@
+<h1>Muon xoa san pham voi thong tin sau phai khong ?</h1>
+<div [hidden]="deleted">
+  <table>
+    <tr>
+      <td>Tieu de</td>
+      <td>{{book.title}}</td>
+    </tr>
+    <tr>
+      <td>Tac gia</td>
+      <td>{{book.author}}</td>
+    </tr>
+    <tr>
+      <td>Mo ta</td>
+      <td>{{book.description}}</td>
+    </tr>
+  </table>
+
+  <button class="btn btn-danger"(click)="deleteThisBook()">Xoa</button>
+</div>
+<div [hidden]="!deleted">{{message}}</div>
+<button  class="btn btn-success" routerLink="">Thoat</button>
+
